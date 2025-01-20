@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { IconType } from "react-icons";
 import { IoLinkOutline } from "react-icons/io5";
 import { CiStar } from "react-icons/ci";
-import { HiOutlineDownload, HiOutlineDotsVertical } from "react-icons/hi";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 
 interface ListItemProps {
   icon: IconType; // Expecting an icon component, not a string
   name: string;
   size: string;
   type: string;
-  modifiedOn: string;
   onSelect: (selected: boolean) => void;
 }
 
@@ -18,7 +17,6 @@ const GridItem: React.FC<ListItemProps> = ({
   name,
   size,
   type,
-  modifiedOn,
   onSelect,
 }) => {
   const [isChecked, setIsChecked] = useState(false);

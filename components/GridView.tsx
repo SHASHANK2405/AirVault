@@ -79,7 +79,6 @@ const GridView = ({ onSelect }: { onSelect: (selected: boolean) => void }) => {
             name={item.name}
             size={item.size}
             type={item.type}
-            modifiedOn={item.modifiedOn}
             onSelect={(selected) => handleSelect(index, selected)}
           />
         ))}

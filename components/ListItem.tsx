@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { IconType } from "react-icons";
-import { RiFolder6Line } from "react-icons/ri"; // Default icon if no match is found
 import { IoLinkOutline } from "react-icons/io5";
 import { HiOutlineDownload, HiOutlineDotsVertical } from "react-icons/hi";
 import { CiStar } from "react-icons/ci";
