@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
-    <div className="max-w-[1280px] w-full mx-auto bg-[#FFFFFF] overflow-hidden flex">
+    <div className="max-w-[1280px] w-full bg-[#FFFFFF] overflow-hidden flex">
       <Head>
         <title>AirVault</title>
         <meta name="description" content="A modern landing page" />
