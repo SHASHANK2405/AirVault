@@ -26,7 +26,12 @@ const MainContent = () => {
       {/* Search and Logo Section */}
       <div className="w-full max-w-[1038px] h-[40px] mt-3 flex justify-between items-center ml-10">
         <div className="w-[510px] h-[40px] px-4 rounded-[10px] border border-[#BCC0E0] flex items-center gap-2">
-          <IoSearch className="text-[#44475B] text-[18px]" />
+          <Image
+            src={"/icons/Vector.svg"}
+            alt="Search Icon"
+            width={18}
+            height={18}
+          />
           <input
             type="text"
             placeholder="AirVault"
@@ -45,13 +50,23 @@ const MainContent = () => {
         </p>
         <div className="flex w-[348px] h-[38px] gap-[20px]">
           <button className="w-[164px] h-[38px] p-[8px_16px] flex items-center justify-start gap-2 rounded-[8px] bg-[#298DFF] text-white">
-            <RxUpload className="text-[16px]" />
+            <Image
+              src={"/icons/Upload.svg"}
+              alt="Upload Icon"
+              width={16}
+              height={16}
+            />
             <span className="w-[51px] h-[22px] font-medium text-[14px] leading-[22px] text-[#FFFFFF]">
               Upload
             </span>
           </button>
           <button className="w-[164px] h-[38px] p-[8px_16px] flex items-center justify-start gap-2 rounded-[8px] border border-[#BCC0E0]">
-            <VscNewFolder className="text-[16px] text-[#44475B]" />
+            <Image
+              src={"/icons/NewFolder.svg"}
+              alt="NewFolder Icon"
+              width={16}
+              height={16}
+            />{" "}
             <span className="w-[75px] h-[22px] font-medium text-[14px] leading-[22px] text-[#44475B]">
               New folder
             </span>
@@ -69,30 +84,57 @@ const MainContent = () => {
               </p>
             </button>
             <button className="w-[110px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <IoLinkOutline className="text-[16px] text-[#44475B]" />
+              <Image
+                src={"/icons/Link.svg"}
+                alt="Link Icon"
+                width={16}
+                height={16}
+              />{" "}
               <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
                 Copy link
               </span>
             </button>
             <button className="w-[117px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <HiOutlineDownload className="text-[16px] text-[#44475B]" />
+              <Image
+                src={"/icons/Download.svg"}
+                alt="Download Icon"
+                width={16}
+                height={16}
+              />{" "}
               <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
                 Download
               </span>
             </button>
             <button className="w-[84px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <IoMoveSharp className="text-[16px] text-[#44475B]" />
+              <Image
+                src={"/icons/Move.svg"}
+                alt="Move Icon"
+                width={16}
+                height={16}
+              />{" "}
               <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
                 Move
               </span>
             </button>
             <button className="w-[91px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <RiDeleteBin6Line className="text-[16px] text-[#44475B]" />
+              <Image
+                src={"/icons/Delete.svg"}
+                alt="Delete Icon"
+                width={16}
+                height={16}
+              />{" "}
               <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
                 Delete
               </span>
             </button>
-            <HiOutlineDotsVertical className="text-[16px] text-[#44475B] mt-2" />
+            <Image
+              src="/icons/Dots.svg"
+              alt="Dots Icon"
+              width={1.42}
+              height={11.72}
+              className="mt-2"
+              style={{ width: "10.42px", height: "11.72px" }}
+            />
           </div>
         )}
 
@@ -101,24 +143,41 @@ const MainContent = () => {
           <p className="w-[100px] h-[22px] text-[14px] leading-[22px] font-medium text-[#44475B] ">
             {selectedCount} selected
           </p>
-          <MdOutlineFormatListBulleted
-            className={`text-[22px] cursor-pointer ${
-              isListView ? "text-blue-500" : "text-[#44475B]"
-            }`}
-            onClick={() => {
-              setIsListView(true);
-              setSelectedCount(0); // Reset selectedCount to 0
-            }}
-          />
-          <BsGrid3X3
-            className={`text-[16px] cursor-pointer ${
-              !isListView ? "text-blue-500" : "text-[#44475B]"
-            }`}
-            onClick={() => {
-              setIsListView(false);
-              setSelectedCount(0); // Reset selectedCount to 0
-            }}
-          />
+          <div className="flex items-center gap-[16px] relative">
+            {/* List Icon */}
+            <div className="relative">
+              <Image
+                src={"/icons/List.svg"}
+                alt="List Icon"
+                width={16}
+                height={16}
+                className={`cursor-pointer ${
+                  isListView ? "text-blue-500" : "text-[#44475B]"
+                }`}
+                onClick={() => {
+                  setIsListView(true);
+                  setSelectedCount(0); // Reset selectedCount to 0
+                }}
+              />
+              {isListView && (
+                <div className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#298DFF]" />
+              )}
+            </div>
+
+            {/* Grid Icon */}
+            <div className="relative">
+              <BsGrid3X3
+                className={`text-[16px] cursor-pointer text-[#44475B]`}
+                onClick={() => {
+                  setIsListView(false);
+                  setSelectedCount(0); // Reset selectedCount to 0
+                }}
+              />
+              {!isListView && (
+                <div className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#298DFF]" />
+              )}
+            </div>
+          </div>
         </div>
       </div>
 

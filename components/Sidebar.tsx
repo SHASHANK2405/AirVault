@@ -21,25 +21,45 @@ const Sidebar = () => {
         />
         <div className="w-[164px] h-[126px] gap-1">
           <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] bg-[#DBEAFE] flex items-center">
-            <GoHome className="w-[16px] h-[16px] text-[#3D4366]" />
+            <Image
+              src={"/icons/Home.svg"}
+              alt="Home Icon"
+              width={12}
+              height={13}
+            />
             <p className="w-[110px] h-[22px] text-[14px] font-normal text-[#3D4366] leading-[22px]">
               Home
             </p>
           </div>
           <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
-            <LuFiles className="w-[16px] h-[16px] text-[#3D4366]" />
+            <Image
+              src={"/icons/Files.svg"}
+              alt="Files Icon"
+              width={12}
+              height={13}
+            />{" "}
             <p className="w-[110px] h-[22px] text-[14px] font-normal text-[#3D4366] leading-[22px]">
               My files
             </p>
           </div>
           <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
-            <GrGroup className="w-[16px] h-[16px] text-[#3D4366]" />
+            <Image
+              src={"/icons/Shared.svg"}
+              alt="Shared Icon"
+              width={15}
+              height={12}
+            />{" "}
             <p className="w-[110px] h-[22px] text-[14px] font-normal text-[#3D4366] leading-[22px]">
               Shared with me
             </p>
           </div>
           <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
-            <RiDeleteBin6Line className="w-[16px] h-[16px] text-[#3D4366]" />
+            <Image
+              src={"/icons/Delete.svg"}
+              alt="Delete Icon"
+              width={12}
+              height={13}
+            />{" "}
             <p className="w-[110px] h-[22px] text-[14px] font-normal text-[#3D4366] leading-[22px]">
               Deleted files
             </p>
@@ -49,17 +69,32 @@ const Sidebar = () => {
           <p className="w-[94px] h-[21px] text-[14px] font-medium text-[#3D4366] leading-[21px]">
             Quick access
           </p>
-          <FaPlus className="w-[15px] h-[15px] text-[#3D4366]" />
+          <Image
+            src={"/icons/Plus.svg"}
+            alt="Plus Icon"
+            width={12}
+            height={13}
+          />{" "}
         </div>
         <div className="w-[164px] h-[126px] gap-1">
           <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
-            <CiStar className="w-[16px] h-[16px] text-[#3D4366]" />
+            <Image
+              src={"/icons/Starred.svg"}
+              alt="Starred Icon"
+              width={12}
+              height={13}
+            />{" "}
             <p className="w-[110px] h-[22px] text-[14px] font-normal text-[#3D4366] leading-[22px]">
               Starred
             </p>
           </div>
           <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
-            <PiFolder className="w-[16px] h-[16px] text-[#3D4366]" />
+            <Image
+              src={"/icons/Custom.svg"}
+              alt="Custom Icon"
+              width={14}
+              height={12}
+            />{" "}
             <p className="w-[110px] h-[22px] text-[14px] font-normal text-[#3D4366] leading-[22px]">
               Custom
             </p>

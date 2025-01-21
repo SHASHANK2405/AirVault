@@ -8,39 +8,39 @@ import { MdOutlineImage } from "react-icons/md";
 // Dataset with icons already as components
 const dataset = [
   {
-    icon: RiFolder6Line,
+    icon: "Custom",
     name: "Folder 1",
     size: "105.88 GB",
     type: "Folder",
     modifiedOn: "Nov 29, 2024 3:00 pm",
   },
   {
-    icon: MdOutlineImage,
+    icon: "image",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
   },
   {
-    icon: RiFolder6Line,
-    name: "Folder 2",
-    size: "102.88 GB",
+    icon: "Custom",
+    name: "Folder 1",
+    size: "105.88 GB",
     type: "Folder",
-    modifiedOn: "Nov 30, 2024 4:00 pm",
+    modifiedOn: "Nov 29, 2024 3:00 pm",
   },
   {
-    icon: MdOutlineImage,
-    name: "Image20159-5590-5104845-4422",
-    size: "110.88 GB",
+    icon: "image",
+    name: "Image20158-5589-5104845-4421",
+    size: "105.88 GB",
     type: "PNG",
-    modifiedOn: "Dec 1, 2024 5:00 pm",
+    modifiedOn: "Nov 29, 2024 3:00 pm",
   },
   {
-    icon: MdOutlineImage,
-    name: "Image20160-5591-5104845-4423",
-    size: "120.88 GB",
+    icon: "image",
+    name: "Image20158-5589-5104845-4421",
+    size: "105.88 GB",
     type: "PNG",
-    modifiedOn: "Dec 2, 2024 6:00 pm",
+    modifiedOn: "Nov 29, 2024 3:00 pm",
   },
 ];
 
