@@ -1,12 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { GoHome } from "react-icons/go";
-import { LuFiles } from "react-icons/lu";
-import { GrGroup } from "react-icons/gr";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { FaPlus } from "react-icons/fa6";
-import { CiStar } from "react-icons/ci";
-import { PiFolder } from "react-icons/pi";
 
 const Sidebar = () => {
   return (

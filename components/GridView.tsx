@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { RiFolder6Line } from "react-icons/ri";
 import { FaArrowUpLong } from "react-icons/fa6";
-import { MdOutlineImage } from "react-icons/md";
 import GridItem from "./GridItem";
 
 const dataset = [

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaArrowUpLong } from "react-icons/fa6";
 import ListItem from "./ListItem";
-import { RiFolder6Line } from "react-icons/ri";
-import { MdOutlineImage } from "react-icons/md";
 
 // Dataset with icons already as components
 const dataset = [

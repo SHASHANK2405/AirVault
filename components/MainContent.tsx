@@ -1,13 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { IoSearch, IoLinkOutline, IoMoveSharp } from "react-icons/io5";
-import { RxUpload } from "react-icons/rx";
-import { VscNewFolder } from "react-icons/vsc";
-import { HiOutlineDownload, HiOutlineDotsVertical } from "react-icons/hi";
 import { BsGrid3X3 } from "react-icons/bs";
-import { MdOutlineFormatListBulleted } from "react-icons/md";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import ListView from "./ListView";
 import { dataset } from "../data/dataset";
 import GridView from "./GridView";
