@@ -16,9 +16,9 @@ const MainContent = () => {
   };
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="w-[80%] h-full flex flex-col p-3">
       {/* Search and Logo Section */}
-      <div className="w-full max-w-[1038px] h-[40px] mt-3 flex justify-between items-center ml-10">
+      <div className="w-full h-[40px] mt-3 flex justify-between items-center ml-10">
         <div className="w-[510px] h-[40px] px-4 rounded-[10px] border border-[#BCC0E0] flex items-center gap-2">
           <Image
             src={"/icons/Vector.svg"}
@@ -38,7 +38,7 @@ const MainContent = () => {
       </div>
 
       {/* Title and Buttons */}
-      <div className="w-full max-w-[1038px] h-[38px] flex justify-between items-center mt-4 ml-10">
+      <div className="w-full h-[38px] flex justify-between items-center mt-4 ml-10">
         <p className="w-[77px] h-[33px] font-medium text-[22px] leading-[33px] text-[#3D4366]">
           All files
         </p>
@@ -69,7 +69,7 @@ const MainContent = () => {
       </div>
 
       {/* Toolbar */}
-      <div className="w-[1038px] h-[30px] mt-2 flex justify-between ml-10 relative">
+      <div className="w-full h-[30px] mt-2 flex justify-between ml-10 relative">
         {selectedCount > 0 && (
           <div className="w-[532px] h-[30px] flex gap-2">
             <button className="w-[74px] h-[30px] rounded-[8px] bg-[#298DFF] text-white">
@@ -178,7 +178,7 @@ const MainContent = () => {
       {/* Conditional Rendering */}
       {dataset.length === 0 ? (
         <div className="flex justify-between items-center">
-          <div className="flex flex-col justify-center items-center w-full my-auto h-[200px] mt-36">
+          <div className="flex flex-col justify-center items-center w-full my-auto h-[200px] mt-48">
             <p className="w-[227px] h-[33px] text-[22px] font-medium leading-[33px] text-[#3D4366] text-center">
               Welcome to AirVault
             </p>

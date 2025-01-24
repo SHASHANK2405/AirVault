@@ -36,7 +36,7 @@ const ListItem: React.FC<ListItemProps> = ({
   };
 
   return (
-    <div className="w-[1062px] h-[46px] flex gap-2 group relative">
+    <div className="w-full h-[46px] flex gap-2 group relative">
       <input
         type="checkbox"
         onChange={handleCheckboxChange}
@@ -44,7 +44,7 @@ const ListItem: React.FC<ListItemProps> = ({
         checked={isChecked}
       />
       <div
-        className={`w-[1038px] py-2 px-3 border flex gap-[36px] items-center hover:border-[#BCC0E0] transition-all duration-300 ${
+        className={`w-full py-2 px-3 border flex gap-[36px] items-center hover:border-[#BCC0E0] transition-all duration-300 ${
           isChecked ? "bg-[#D6ECFF]" : "hover:bg-[#EDF3FA]"
         }`}
       >
@@ -70,7 +70,7 @@ const ListItem: React.FC<ListItemProps> = ({
         <p className="w-[180px] h-[22px] text-[14px] leading-[22px] font-normal text-[#44475B]">
           {modifiedOn}
         </p>
-        <div className="w-[206px] h-[30px] flex gap-4 items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="w-[206px] h-[30px] flex gap-4 items-center justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <button className="w-[74px] h-[30px] rounded-[8px] bg-[#298DFF] text-white flex justify-center items-center">
             <p className="text-[14px] leading-[22px] font-medium">Share</p>
           </button>
@@ -92,12 +92,7 @@ const ListItem: React.FC<ListItemProps> = ({
             width={13}
             height={13}
           />
-          <Image
-            src="/icons/Dots.svg"
-            alt="Dots Icon"
-            width={10.42}
-            height={11.72}
-          />
+          <Image src="/icons/Dots.svg" alt="Dots Icon" width={4} height={11} />
         </div>
       </div>
     </div>

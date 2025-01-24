@@ -3,8 +3,8 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="w-[188px] h-[720px] border bg-[#F7F9FC]">
-      <div className="w-[164px] h-[360px] mt-3 ml-2 flex flex-col gap-3 ">
+    <div className=" w-[15%] h-lvh border bg-[#F7F9FC] ">
+      <div className="w-full h-[360px] mt-3 p-3 flex flex-col gap-3 ">
         <Image
           src={"assets/Logo.png"}
           alt="Logo"
@@ -12,8 +12,8 @@ const Sidebar = () => {
           height={26}
           className="ml-3 "
         />
-        <div className="w-[164px] h-[126px] gap-1">
-          <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] bg-[#DBEAFE] flex items-center">
+        <div className="w-[90%] h-[126px] gap-1">
+          <div className="w-full h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] bg-[#DBEAFE] flex items-center">
             <Image
               src={"/icons/Home.svg"}
               alt="Home Icon"
@@ -59,7 +59,7 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="flex items-center w-[127px] h-[21px] mx-3 gap-2">
-          <p className="w-[94px] h-[21px] text-[14px] font-medium text-[#3D4366] leading-[21px]">
+          <p className="w-full h-[21px] text-[14px] font-medium text-[#3D4366] leading-[21px]">
             Quick access
           </p>
           <Image
@@ -69,8 +69,8 @@ const Sidebar = () => {
             height={13}
           />{" "}
         </div>
-        <div className="w-[164px] h-[126px] gap-1">
-          <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
+        <div className="w-[90%] h-[126px] gap-1">
+          <div className="w-full h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
             <Image
               src={"/icons/Starred.svg"}
               alt="Starred Icon"
@@ -81,7 +81,7 @@ const Sidebar = () => {
               Starred
             </p>
           </div>
-          <div className="w-[164px] h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
+          <div className="w-full h-[30px] p-[4px_16px] gap-[8px] rounded-[8px] flex items-center">
             <Image
               src={"/icons/Custom.svg"}
               alt="Custom Icon"
@@ -93,11 +93,11 @@ const Sidebar = () => {
             </p>
           </div>
         </div>
-        <div className="w-[164px] h-[61px] mx-3 flex flex-col gap-1">
+        <div className="w-[90%] h-[61px] mx-3 flex flex-col gap-1">
           <p className="w-[132px] h-[21px] text-[14px] font-medium text-[#3D4366] leading-[21px]">
             Storage
           </p>
-          <div className="w-[132px] h-[6px] rounded-[10px] bg-[#D3DBE0]">
+          <div className="w-[80%] h-[6px] rounded-[10px] bg-[#D3DBE0]">
             <div className="w-[62px] h-[6px] rounded-[20px] bg-gradient-to-r from-[#46BFFB] to-[#298DFF]"></div>
           </div>
           <p className="w-[132px] h-[22px] text-[14px] font-normal leading-[22px] text-[#44475B]">

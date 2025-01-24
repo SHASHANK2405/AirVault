@@ -69,7 +69,7 @@ const GridView = ({ onSelect }: { onSelect: (selected: boolean) => void }) => {
         <FaArrowUpLong className="w-[7px] h-[10px] text-[#44475B] ml-[8px]" />
       </div>
       {/* Grid container */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid lg:grid-cols-4 xl:grid-cols-6  gap-4">
         {dataset.map((item, index) => (
           <GridItem
             key={index}

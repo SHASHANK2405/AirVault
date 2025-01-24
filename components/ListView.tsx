@@ -55,7 +55,7 @@ const ListView = ({ onSelect }: { onSelect: (selected: boolean) => void }) => {
   };
 
   return (
-    <div className="w-[1062px] h-[214px] flex flex-col mt-5 mx-3">
+    <div className="w-full flex flex-col mt-5 mx-3">
       <div className="flex items-center">
         <Image
           src={"/assets/minus.png"}
@@ -78,7 +78,7 @@ const ListView = ({ onSelect }: { onSelect: (selected: boolean) => void }) => {
           Modified on
         </p>
       </div>
-      <div className="w-[1062px] h-auto flex flex-col">
+      <div className="w-full h-auto flex flex-col">
         {dataset.map((item, index) => (
           <ListItem
             key={index}
