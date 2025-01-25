@@ -8,6 +8,7 @@ export type DatasetItem = {
   size: string;
   type: string;
   modifiedOn: string;
+  SharedBy: string;
 };
 
 export const dataset: DatasetItem[] = [
@@ -17,6 +18,7 @@ export const dataset: DatasetItem[] = [
     size: "105.88 GB",
     type: "Folder",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Bishal Bhattacharya",
   },
   {
     icon: "/icons/Image.png",
@@ -24,6 +26,7 @@ export const dataset: DatasetItem[] = [
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "rituraj",
   },
   {
     icon: "/icons/Custom.png",
@@ -31,6 +34,7 @@ export const dataset: DatasetItem[] = [
     size: "105.88 GB",
     type: "Folder",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Rohit Chowik",
   },
   {
     icon: "/icons/Image.png",
@@ -38,6 +42,7 @@ export const dataset: DatasetItem[] = [
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Rituraj Kumar ",
   },
   {
     icon: "/icons/Image.png",
@@ -45,5 +50,6 @@ export const dataset: DatasetItem[] = [
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Ashutosh Mishra",
   },
 ];

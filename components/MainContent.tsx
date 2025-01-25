@@ -39,9 +39,9 @@ const MainContent: React.FC<MainContentProps> = ({ activeComponent }) => {
           afterBold={"button"}
         />
       ) : isListView ? (
-        <ListView onSelect={handleSelect} />
+        <ListView onSelect={handleSelect} activeComponent={activeComponent} />
       ) : (
-        <GridView onSelect={handleSelect} />
+        <GridView onSelect={handleSelect} activeComponent={activeComponent} />
       )}
     </div>
   );

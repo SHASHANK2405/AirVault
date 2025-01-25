@@ -2,6 +2,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
 import GridItem from "./GridItem";
+interface GridViewProps {
+  onSelect: (selected: boolean) => void;
+  activeComponent: string; // Add activeComponent prop
+}
 
 const dataset = [
   {
@@ -41,7 +45,7 @@ const dataset = [
   },
 ];
 
-const GridView = ({ onSelect }: { onSelect: (selected: boolean) => void }) => {
+const GridView: React.FC<GridViewProps> = ({ onSelect, activeComponent }) => {
   const [selectedItems, setSelectedItems] = useState<boolean[]>(
     new Array(dataset.length).fill(false)
   );
