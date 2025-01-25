@@ -10,9 +10,9 @@ const MyFiles: React.FC<MyFilesProps> = ({ activeComponent }) => {
   const [isListView, setIsListView] = useState(true); // Track whether the ListView or GridView is active
 
   // Update the selected count when a checkbox is toggled
-  const handleSelect = (selected: boolean) => {
-    setSelectedCount((prev) => (selected ? prev + 1 : prev - 1));
-  };
+  // const handleSelect = (selected: boolean) => {
+  //   setSelectedCount((prev) => (selected ? prev + 1 : prev - 1));
+  // };
   return (
     <div className="w-[97%] h-full flex flex-col ">
       <SidebarMenuHeader

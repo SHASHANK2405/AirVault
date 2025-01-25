@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import { BsGrid3X3 } from "react-icons/bs";
 import ListView from "./ListView";
 import { dataset } from "../data/dataset";
 import GridView from "./GridView";
