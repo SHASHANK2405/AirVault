@@ -77,12 +77,12 @@ const GridItem: React.FC<ListItemProps> = ({
             width={16}
             height={16}
           />
-          <div className="w-[136px] h-[38px] gap-[4px] flex flex-col items-start">
-            <p className="w-[136px] h-[22px] text-[14px] leading-[22px] font-normal text-[#44475B]">
+          <div className="w-[186px] h-[38px] gap-[4px] flex flex-col items-start">
+            <p className="w-[186px] h-[22px] text-[14px] leading-[22px] font-normal text-[#44475B]">
               {name.length > 15 ? `${name.slice(0, 15)}...` : name}
             </p>
-            <div className="w-[136px] h-[12px] flex gap-[6px]">
-              <p className="w-[136px] h-[12px] font-normal text-[12px] leading-[12px] text-[#6C6E7A]">
+            <div className="w-[186px] h-[12px] flex gap-[6px]">
+              <p className="w-[186px] h-[12px] font-normal text-[12px] leading-[12px] text-[#6C6E7A]">
                 {type} . {size}
               </p>
             </div>
