@@ -114,13 +114,13 @@ const GridView: React.FC<GridViewProps> = ({ onSelect, activeComponent }) => {
               size={item.size}
               type={item.type}
               activeComponent={activeComponent}
-              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
+              onSelect={(selected) => handleSelect(item.id - 1, selected)}
             />
           ))}
         </div>
       ) : (
         <div className="grid lg:grid-cols-4 xl:grid-cols-6  gap-4">
-          {dataset.map((item, index) => (
+          {dataset.map((item) => (
             <GridItem
               key={item.id}
               icon={item.icon}
