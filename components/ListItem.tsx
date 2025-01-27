@@ -61,7 +61,7 @@ const ListItem: React.FC<ListItemProps> = ({
               className="text-[16px] text-[#44475B]"
             />
             <p className="w-[200px] h-[22px] text-[14px] leading-[22px] font-normal text-[#44475B] flex gap-2">
-              {name.length > 22 ? `${name.slice(0, 22)}...` : name}
+              {name.length > 20 ? `${name.slice(0, 20)}...` : name}
               <Image
                 src={"/icons/FilledStars.svg"}
                 alt="Starred Icon"
@@ -80,7 +80,7 @@ const ListItem: React.FC<ListItemProps> = ({
               className="text-[16px] text-[#44475B]"
             />
             <p className="w-[200px] h-[22px] text-[14px] leading-[22px] font-normal text-[#44475B]">
-              {name.length > 22 ? `${name.slice(0, 24)}...` : name}
+              {name.length > 22 ? `${name.slice(0, 22)}...` : name}
             </p>
           </div>
         )}
