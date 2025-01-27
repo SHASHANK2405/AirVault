@@ -73,63 +73,92 @@ const SidebarMenuHeader: React.FC<SidebarMenuHeaderProps> = ({
       <div className="w-full h-[30px] mt-2 flex justify-between ml-10 relative">
         {selectedCount > 0 && (
           <div className="w-[532px] h-[30px] flex gap-2">
-            <button className="w-[74px] h-[30px] rounded-[8px] bg-[#298DFF] text-white">
-              <p className="w-[43px] h-[22px] font-medium text-[14px] leading-[22px] text-[#FFFFFF] mx-auto">
-                Share
-              </p>
-            </button>
-            <button className="w-[110px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <Image
-                src={"/icons/Link.svg"}
-                alt="Link Icon"
-                width={16}
-                height={16}
-              />{" "}
-              <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
-                Copy link
-              </span>
-            </button>
-            <button className="w-[117px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <Image
-                src={"/icons/Download.svg"}
-                alt="Download Icon"
-                width={16}
-                height={16}
-              />{" "}
-              <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
-                Download
-              </span>
-            </button>
-            <button className="w-[84px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <Image
-                src={"/icons/Move.svg"}
-                alt="Move Icon"
-                width={16}
-                height={16}
-              />{" "}
-              <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
-                Move
-              </span>
-            </button>
-            <button className="w-[91px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
-              <Image
-                src={"/icons/Delete.svg"}
-                alt="Delete Icon"
-                width={16}
-                height={16}
-              />{" "}
-              <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
-                Delete
-              </span>
-            </button>
-            <Image
-              src="/icons/Dots.svg"
-              alt="Dots Icon"
-              width={1.42}
-              height={11.72}
-              className="mt-2"
-              style={{ width: "10.42px", height: "11.72px" }}
-            />
+            {activeComponent === "Deleted files" ? (
+              <>
+                <button className="w-[99px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
+                  <Image
+                    src={"/icons/Restore.svg"}
+                    alt="Restore Icon"
+                    width={16}
+                    height={16}
+                  />{" "}
+                  <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
+                    Restore
+                  </span>
+                </button>
+                <button className="w-[144px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
+                  <Image
+                    src={"/icons/Delete.svg"}
+                    alt="Delete Icon"
+                    width={16}
+                    height={16}
+                  />{" "}
+                  <span className="w-[98px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
+                    Delete forever
+                  </span>
+                </button>
+              </>
+            ) : (
+              <>
+                <button className="w-[74px] h-[30px] rounded-[8px] bg-[#298DFF] text-white">
+                  <p className="w-[43px] h-[22px] font-medium text-[14px] leading-[22px] text-[#FFFFFF] mx-auto">
+                    Share
+                  </p>
+                </button>
+                <button className="w-[110px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
+                  <Image
+                    src={"/icons/Link.svg"}
+                    alt="Link Icon"
+                    width={16}
+                    height={16}
+                  />{" "}
+                  <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
+                    Copy link
+                  </span>
+                </button>
+                <button className="w-[117px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
+                  <Image
+                    src={"/icons/Download.svg"}
+                    alt="Download Icon"
+                    width={16}
+                    height={16}
+                  />{" "}
+                  <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
+                    Download
+                  </span>
+                </button>
+                <button className="w-[84px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
+                  <Image
+                    src={"/icons/Move.svg"}
+                    alt="Move Icon"
+                    width={16}
+                    height={16}
+                  />{" "}
+                  <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
+                    Move
+                  </span>
+                </button>
+                <button className="w-[91px] h-[30px] flex items-center justify-start gap-1 py-2 px-3 rounded-[8px] bg-[#EDF3FA]">
+                  <Image
+                    src={"/icons/Delete.svg"}
+                    alt="Delete Icon"
+                    width={16}
+                    height={16}
+                  />{" "}
+                  <span className="w-[64px] h-[22px] font-normal text-[14px] leading-[22px] text-[#44475B]">
+                    Delete
+                  </span>
+                </button>
+                <Image
+                  src="/icons/Dots.svg"
+                  alt="Dots Icon"
+                  width={1.42}
+                  height={11.72}
+                  className="mt-2"
+                  style={{ width: "10.42px", height: "11.72px" }}
+                />
+              </>
+            )}
           </div>
         )}
 

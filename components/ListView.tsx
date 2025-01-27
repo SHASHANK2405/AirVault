@@ -10,6 +10,7 @@ interface ListViewProps {
 
 const dataset = [
   {
+    id: 1,
     icon: "/icons/Custom.png",
     name: "Folder 1",
     size: "105.88 GB",
@@ -18,6 +19,7 @@ const dataset = [
     SharedBy: "Bishal Bhattacharya",
   },
   {
+    id: 2,
     icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
@@ -26,6 +28,7 @@ const dataset = [
     SharedBy: "rituraj",
   },
   {
+    id: 3,
     icon: "/icons/Custom.png",
     name: "Folder 1",
     size: "105.88 GB",
@@ -34,6 +37,7 @@ const dataset = [
     SharedBy: "Rohit Chowik",
   },
   {
+    id: 4,
     icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
@@ -42,6 +46,7 @@ const dataset = [
     SharedBy: "Rituraj Kumar ",
   },
   {
+    id: 5,
     icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
@@ -85,27 +90,33 @@ const ListView: React.FC<ListViewProps> = ({ onSelect, activeComponent }) => {
           Type
         </p>
         <p className="text-[14px] leading-[22px] ml-[100px] font-medium text-[#3D4366]">
-          {activeComponent === "Shared with me" ? "Shared by" : "Modified on"}
+          {activeComponent === "Shared with me"
+            ? "Shared by"
+            : activeComponent === "Deleted files"
+            ? "Deleted on"
+            : "Modified on"}
         </p>
       </div>
 
       {/* Conditional Rendering Based on activeComponent */}
-
-      {activeComponent === "My files" ? (
+      {activeComponent === "My files" ||
+      activeComponent === "Shared with me" ? (
         <div className="w-full h-auto flex flex-col mt-2">
           {/* Last Week */}
           <p className="w-[79px] h-[22px] font-medium text-[14px] leading-[22px] text-[#3D4366]">
             Last week
           </p>
-          {dataset.slice(0, 3).map((item, index) => (
+          {dataset.slice(0, 3).map((item) => (
             <ListItem
-              key={index}
-              icon={item.icon} // Pass the actual icon component
+              key={item.id} // Use id as key
+              icon={item.icon}
               name={item.name}
               size={item.size}
               type={item.type}
               modifiedOn={item.modifiedOn}
-              onSelect={(selected) => handleSelect(index, selected)}
+              SharedBy={item.SharedBy}
+              activeComponent={activeComponent}
+              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
             />
           ))}
 
@@ -113,29 +124,32 @@ const ListView: React.FC<ListViewProps> = ({ onSelect, activeComponent }) => {
           <p className="w-[79px] h-[22px] font-medium text-[14px] leading-[22px] text-[#3D4366]">
             Last month
           </p>
-          {dataset.slice(3).map((item, index) => (
+          {dataset.slice(3).map((item) => (
             <ListItem
-              key={index + 3} // Adjust index to avoid duplicate keys
-              icon={item.icon} // Pass the actual icon component
+              key={item.id} // Use id as key
+              icon={item.icon}
               name={item.name}
               size={item.size}
               type={item.type}
+              activeComponent={activeComponent}
               modifiedOn={item.modifiedOn}
-              onSelect={(selected) => handleSelect(index + 3, selected)}
+              SharedBy={item.SharedBy}
+              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
             />
           ))}
         </div>
       ) : (
-        dataset.map((item, index) => (
-          <div className="w-full h-auto flex flex-col">
+        dataset.map((item) => (
+          <div className="w-full h-auto flex flex-col" key={item.id}>
             <ListItem
-              key={index}
-              icon={item.icon} // Pass the actual icon component
+              icon={item.icon}
               name={item.name}
               size={item.size}
               type={item.type}
               modifiedOn={item.modifiedOn}
-              onSelect={(selected) => handleSelect(index, selected)}
+              activeComponent={activeComponent}
+              SharedBy={item.SharedBy}
+              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
             />
           </div>
         ))

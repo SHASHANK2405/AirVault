@@ -3,6 +3,7 @@ import { RiFolder6Line } from "react-icons/ri";
 
 // Define types for dataset
 export type DatasetItem = {
+  id: number;
   icon: string; // React component for icon
   name: string;
   size: string;
@@ -13,6 +14,7 @@ export type DatasetItem = {
 
 export const dataset: DatasetItem[] = [
   {
+    id: 1,
     icon: "/icons/Custom.png",
     name: "Folder 1",
     size: "105.88 GB",
@@ -21,6 +23,7 @@ export const dataset: DatasetItem[] = [
     SharedBy: "Bishal Bhattacharya",
   },
   {
+    id: 2,
     icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
@@ -29,6 +32,7 @@ export const dataset: DatasetItem[] = [
     SharedBy: "rituraj",
   },
   {
+    id: 3,
     icon: "/icons/Custom.png",
     name: "Folder 1",
     size: "105.88 GB",
@@ -37,6 +41,7 @@ export const dataset: DatasetItem[] = [
     SharedBy: "Rohit Chowik",
   },
   {
+    id: 4,
     icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
@@ -45,6 +50,7 @@ export const dataset: DatasetItem[] = [
     SharedBy: "Rituraj Kumar ",
   },
   {
+    id: 5,
     icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",

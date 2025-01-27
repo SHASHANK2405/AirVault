@@ -9,39 +9,49 @@ interface GridViewProps {
 
 const dataset = [
   {
-    icon: "Custom",
+    id: 1,
+    icon: "/icons/Custom.png",
     name: "Folder 1",
     size: "105.88 GB",
     type: "Folder",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Bishal Bhattacharya",
   },
   {
-    icon: "image",
+    id: 2,
+    icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "rituraj",
   },
   {
-    icon: "Custom",
+    id: 3,
+    icon: "/icons/Custom.png",
     name: "Folder 1",
     size: "105.88 GB",
     type: "Folder",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Rohit Chowik",
   },
   {
-    icon: "image",
+    id: 4,
+    icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Rituraj Kumar ",
   },
   {
-    icon: "image",
+    id: 5,
+    icon: "/icons/Image.png",
     name: "Image20158-5589-5104845-4421",
     size: "105.88 GB",
     type: "PNG",
     modifiedOn: "Nov 29, 2024 3:00 pm",
+    SharedBy: "Ashutosh Mishra",
   },
 ];
 
@@ -73,18 +83,56 @@ const GridView: React.FC<GridViewProps> = ({ onSelect, activeComponent }) => {
         <FaArrowUpLong className="w-[7px] h-[10px] text-[#44475B] ml-[8px]" />
       </div>
       {/* Grid container */}
-      <div className="grid lg:grid-cols-4 xl:grid-cols-6  gap-4">
-        {dataset.map((item, index) => (
-          <GridItem
-            key={index}
-            icon={item.icon} // Pass the actual icon component
-            name={item.name}
-            size={item.size}
-            type={item.type}
-            onSelect={(selected) => handleSelect(index, selected)}
-          />
-        ))}
-      </div>
+      {activeComponent === "My files" ||
+      activeComponent === "Shared with me" ? (
+        <div className="grid lg:grid-cols-4 xl:grid-cols-6 gap-4">
+          {/* Last Week */}
+          <p className="w-full col-span-full font-medium text-[14px] leading-[22px] text-[#3D4366]">
+            Last week
+          </p>
+          {dataset.slice(0, 3).map((item) => (
+            <GridItem
+              key={item.id} // Use id as key
+              icon={item.icon}
+              name={item.name}
+              size={item.size}
+              type={item.type}
+              activeComponent={activeComponent}
+              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
+            />
+          ))}
+
+          {/* Last Month */}
+          <p className="w-full col-span-full font-medium text-[14px] leading-[22px] text-[#3D4366]">
+            Last month
+          </p>
+          {dataset.slice(3).map((item) => (
+            <GridItem
+              key={item.id} // Use id as key
+              icon={item.icon}
+              name={item.name}
+              size={item.size}
+              type={item.type}
+              activeComponent={activeComponent}
+              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="grid lg:grid-cols-4 xl:grid-cols-6  gap-4">
+          {dataset.map((item, index) => (
+            <GridItem
+              key={item.id}
+              icon={item.icon}
+              name={item.name}
+              size={item.size}
+              type={item.type}
+              activeComponent={activeComponent}
+              onSelect={(selected) => handleSelect(item.id - 1, selected)} // Adjust index for correct selection
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
